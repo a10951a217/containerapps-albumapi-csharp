@@ -11,8 +11,8 @@ resources:
 variables:
   # Container registry service connection established during pipeline creation
   dockerRegistryServiceConnection: 'b1ac5a01-447b-40fa-a7d7-169f3927e452'
-  imageRepository: 'aacontainerappsalbumapicsharp'
-  containerRegistry: 'demoaciapp42.azurecr.io'
+  imageRepository: 'acicsharp'
+  containerRegistry: 'acrdemo5s.azurecr.io'
   dockerfilePath: '$(Build.SourcesDirectory)/src/Dockerfile'
   tag: '$(Build.BuildId)'
 
@@ -40,10 +40,10 @@ stages:
     - task: AzureContainerApps@1
       inputs:
         azureSubscription: 'Free Trial(33d2db97-de4b-424a-94c8-6ad57f004479)'
-        acrName: 'demoaciapp42'
-        acrUsername: 'demoaciapp42'
-        acrPassword: 'LIoOtraBW2rakcTXwwJLFddnfFH5b39u2bJwiM8YVk+ACRD9HGRp'
-        imageToDeploy: 'demoaciapp42.azurecr.io/aacontainerappsalbumapicsharp'
+        acrName: 'acrdemo5s'
+        acrUsername: 'acrdemo5s'
+        acrPassword: $(acrpassword)
+        imageToDeploy: 'acrdemo5s.azurecr.io/acicsharp'
         containerAppName: 'aciapp'
         resourceGroup: 'aci-rg1'
 
