@@ -45,6 +45,6 @@ stages:
         acrPassword: 'LIoOtraBW2rakcTXwwJLFddnfFH5b39u2bJwiM8YVk+ACRD9HGRp'
         imageToDeploy: 'demoaciapp42.azurecr.io/aacontainerappsalbumapicsharp'
         containerAppName: 'aciapp'
-        resourceGroup: 'aci-rg'
+        resourceGroup: 'aci-rg1'
 
         
