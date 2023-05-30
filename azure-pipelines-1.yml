@@ -46,7 +46,7 @@ stages:
     - task: AzureContainerApps@1
       inputs:
         azureSubscription: 'Free Trial(33d2db97-de4b-424a-94c8-6ad57f004479)'
-        acrName: 'acrdemo5s'
+        acrName: '$(containerRegistry)'
         acrUsername: 'acrdemo5s'
         acrPassword: '$(acrpassword)'
         imageToDeploy: 'acrdemo5s.azurecr.io/aacontainerappsalbumapicsharp'
