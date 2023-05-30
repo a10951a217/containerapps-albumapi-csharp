@@ -37,6 +37,12 @@ stages:
         containerRegistry: $(dockerRegistryServiceConnection)
         tags: |
           $(tag)
+    - task: AzureCLI@2
+      inputs:
+        azureSubscription: 'Free Trial(33d2db97-de4b-424a-94c8-6ad57f004479)'
+        scriptType: 'bash'
+        scriptLocation: 'inlineScript'
+        inlineScript: 'az group create -l eastus -n acr-rg1'
     - task: AzureContainerApps@1
       inputs:
         azureSubscription: 'Free Trial(33d2db97-de4b-424a-94c8-6ad57f004479)'
