@@ -37,5 +37,14 @@ stages:
         containerRegistry: $(dockerRegistryServiceConnection)
         tags: |
           $(tag)
+    - task: AzureContainerApps@1
+      inputs:
+        azureSubscription: 'Free Trial(33d2db97-de4b-424a-94c8-6ad57f004479)'
+        acrName: 'demoaciapp42'
+        acrUsername: 'demoaciapp42'
+        acrPassword: 'LIoOtraBW2rakcTXwwJLFddnfFH5b39u2bJwiM8YVk+ACRD9HGRp'
+        imageToDeploy: 'demoaciapp42.azurecr.io/aacontainerappsalbumapicsharp:89'
+        containerAppName: 'aciapp'
+        resourceGroup: 'aci-rg'
 
         
