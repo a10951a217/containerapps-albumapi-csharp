@@ -43,7 +43,7 @@ stages:
         acrName: 'acrdemo5s'
         acrUsername: 'acrdemo5s'
         acrPassword: '$(acrpassword)'
-        imageToDeploy: 'acrdemo5s.azurecr.io/aacontainerappsalbumapicsharp'
+        imageToDeploy: 'acrdemo5s.azurecr.io/aacontainerappsalbumapicsharp:$(tag)'
         containerAppName: 'aciappdemo'
         resourceGroup: 'aci-rg1'
         containerAppEnvironment: 'aciappdemo-env'
