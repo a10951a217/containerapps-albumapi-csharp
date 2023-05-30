@@ -52,3 +52,4 @@ stages:
         imageToDeploy: 'acrdemo5s.azurecr.io/aacontainerappsalbumapicsharp'
         containerAppName: 'aciappdemo'
         resourceGroup: 'acr-rg1'
+        containerAppEnvironment: 'aciappdemo-env'
